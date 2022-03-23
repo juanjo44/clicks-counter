@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import juanBetancourtLogo from './images/juan-betancourt-logo.svg';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='juan-betancourt-logo-container'>
+        <img 
+          className='juan-betancourt-logo'
+          src={juanBetancourtLogo}
+          alt='Logo de freeCodeCamp' />
+      </div>
+      <div className='principal-container'>
+        
+      </div>
     </div>
   );
 }
