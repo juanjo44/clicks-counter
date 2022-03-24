@@ -1,18 +1,21 @@
 
 import './App.css';
 import juanBetancourtLogo from './images/juan-betancourt-logo.svg';
-import Button from './components/Button'
-import { click } from '@testing-library/user-event/dist/click';
+import Button from './components/Button';
+import Counter from './components/Counter';
+import  {useState} from 'react';
 
 function App() {
 
+  const [clickAmount, setClickAmount] = useState(0);
+
   const clickManagement = () =>{
-    console.log('Click')
-  }
+    setClickAmount(clickAmount + 1);
+  };
 
   const resetCounter = () =>{
-    console.log('Reset')
-  }
+    setClickAmount(0)
+  };
   return (
     <div className='App'>
       <div className='juan-betancourt-logo-container'>
@@ -22,6 +25,8 @@ function App() {
           alt='Logo de Juan Betancourt' />
       </div>
       <div className='principal-container'>
+        <Counter
+          clickAmount={clickAmount}/>
         <Button 
           text='Click'
           isAClickButton={true}
